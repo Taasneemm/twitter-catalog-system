@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+<html>
+    <head>
+        
+        <!--<link rel="stylesheet" href="static/styles.css">-->
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        
+        
+    </head>
+    <body>
+        <div class="container">
+
+            <!--header-->
+            <!--<div class="myheader">
+                <div><img src = "static/logo.png"></div>
+                <div><h1>Twitter Cataloging System</h1></div>
+                <div class="navBar">
+                    <a href="{{ url_for('Register') }}">Register</a>
+                    <a href="{{ url_for('index') }}">Login</a>
+                    <a href="{{ url_for('Catalog') }}">Catalog</a>
+                    <a href="{{ url_for('Dashboard') }}">Dashboard</a>
+                    <a href="{{ url_for('Upload') }}">Upload</a>
+                    <a href="{{ url_for('Logout') }}">Logout</a>
+                </div> 
+            
+            </div>-->
+
+            <!--Big Container-->
+            
+
+            {% block sidebar %}
+
+            <div class = "container" id = "catalog-container">
+
+                <div class = "left-side">
+                    <img src = "https://img.icons8.com/ios-glyphs/90/000000/user--v1.png"/>
+                    <p id = "q2_user_display">My id is : {{ name }}</p>
+                    <p>My role is a cataloger</p>
+
+                </div>
+            {% endblock %}
+
+            {% block content %}
+
+                <div class = "right-side">
+
+                    
+                    
+                    <!--For now , label type put textfield, will change accordingly along the way-->
+                    <p><label class="formLabel" id="whenLabel">When</label></p>
+                    <p><input type="date" class="inputField" id ="whenInput" placeholder="dd/mm/yyyy"></p>
+
+                    <p><label class="formLabel" id="whoLabel">Who</label></p>
+                    <p><textarea  class="inputField" rows="1" id="whoInput"></textarea></p>
+
+                    <!--A text area can be set to editing or read-only-->
+                    <p><label class="formLabel" id="commentLabel">Comment</label></p>
+                    <p><textarea class="inputField" id="commentInput" rows=2></textarea></p>
+
+                    <p><label class="formLabel" id="aboutLabel">About</label></p>
+                    <p><textarea  class="inputField" id = "aboutInput" rows="1"></textarea></p>
+
+                    <p><label class="formLabel" id= "mediaLabel">Media</label></p>
+                    <p> <select class="inputField" id="mediaInput">
+                        <option value="" disabled selected>*Please select*</option>
+                        <option value="text">text</option>
+                        <option value="photo">photo</option>
+                        <option value="video">video</option>
+                    </select></p>
+
+                    <p><label class="formLabel" id = "whatLabel">What(hashtag)</label></p>
+                    <p><textarea class="inputField" id="whatInput" rows="1"></textarea></p>
+
+                    <p><label class="formLabel" id="whomLabel">Whom(user_mentions)</label></p>
+                    <p><textarea class="inputField" id="whomInput" rows="1"></textarea></p>
+
+                    <p><label class="formLabel" id="referenceIdLabel">Reference Id</label></p>
+                    <p><textarea class="inputField" id="referenceIdInput" rows="1"></textarea></p>
+
+                    <div>
+                        <button type="button" class="formLabel" id="submitButton">Submit</button>
+                    </div>
+
+                    <!--title for table-->
+                    <div id="catalog-html-table-title">
+                        <h1>The following record has been entered</h1>
+
+                    </div>
+
+                    <!--Create table with heading-->
+                    <table id="catalog-html-table-value">
+                        <tr>
+                            <th><b>Attribute</b></th>
+                            <th><b>Value</b></th>
+                        </tr>
+                    </table>
+
+                    <div id="catalog-tweet-count"></div>
+                        
+            
+
+                    
+
+                    
+
+                    
+
+                </div>
+                {% endblock %}
+
+            </div>
+
+        </div>
+
+    </body>
+    {% block catalogJS %}
+
+    <script src="static/catalog.js"></script>
+    {% endblock %}
+</html>

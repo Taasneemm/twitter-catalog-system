@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+<html>
+    <head>
+        <!--<link rel="stylesheet" href="static/styles.css">-->
+
+    </head>
+
+    <body>
+
+        <div class="container">
+
+            <!--<div class="myheader">
+                <div><img src = "static/logo.png"></div>
+                <div><h1>Twitter Cataloging System</h1></div>
+                <div class="navBar">
+                    <a href="{{ url_for('Register') }}">Register</a>
+                    <a href="{{ url_for('index') }}">Login</a>
+                    <a href="{{ url_for('Catalog') }}">Catalog</a>
+                    <a href="{{ url_for('Dashboard') }}">Dashboard</a>
+                    <a href="{{ url_for('Upload') }}">Upload</a>
+                    <a href="{{ url_for('Logout') }}">Logout</a>
+                </div>
+            </div>-->
+
+            
+            {% block content %}
+
+            <div class="register_tab_body" id="index-html-container">
+
+                <p>
+                    <button type="button" class="index-html_OR_login_register_tab" onclick = "window.location.href ='{{ url_for('Register') }}';">Register</button>
+                    
+                    <button type="button" class="index-html_OR_login_login_tab">Login</button>
+                </p>
+
+                <form method="POST" action="/Login">
+                    <label for = "q2_email_label">Enter Your Email:</label><br>
+                    <input type = "text" id = "q2_email_label" name = "q2_email_label" ><br>
+
+                    <label for = "q2_passwd_label">Enter Your password:</label><br>
+                    <input type = "text" id = "q2_passwd_label" name = "q2_passwd_label" ><br><br>
+
+                    <input type = "submit" value = "Login" id = "q2_login_button">
+
+
+
+                </form>
+
+            </div>
+            {% endblock %}
+
+        
+
+
+
+            
+
+            
+            <!--
+            <div class="register_tab_body" id="index-html-container">
+                <p>
+                    <button type="button" class="index-html_OR_login_register_tab" onclick="window.location.href='register.html';">Register</button>
+                    
+                    <button type="button" class="index-html_OR_login_login_tab">Login</button>
+                </p>
+                
+                
+                <label class="email_label">Enter your email:</label><br>
+                <input type="text" class="index-html-email_input" id = "q2_email_input"><br>
+    
+                <label class="passwd_label">Enter your password:</label><br>
+                <input type="text" class="index-html-passwd_input" id = "q2_passwd_input"><br>
+    
+                
+    
+                <div>
+                    <button type="button" class="login_button">Login</button>
+                </div>
+                
+                
+            </div>
+
+            -->
+        
+         </div> 
+    </body>
+</html>

@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+<html>
+    <head>
+        
+        <!--<link rel="stylesheet" href="static/styles.css">-->
+        
+    </head>
+    <body>
+        <div class="container">
+
+            <!--header-->
+            <!--<div class="myheader">
+                <div><img src = "static/logo.png"></div>
+                <div><h1>Twitter Cataloging System</h1></div>
+                <div class="navBar">
+                    <a href="{{ url_for('Register') }}">Register</a>
+                    <a href="{{ url_for('index') }}">Login</a>
+                    <a href="{{ url_for('Catalog') }}">Catalog</a>
+                    <a href="{{ url_for('Dashboard') }}">Dashboard</a>
+                    <a href="{{ url_for('Upload') }}">Upload</a>
+                    <a href="{{ url_for('Logout') }}">Logout</a>
+                </div> 
+            
+            </div>-->
+
+            <!--Big Container-->
+            {% block sidebar %}
+
+            <div class = "container" id = "catalog-container">
+
+                
+
+                <div class = "left-side">
+                    <img src = "https://img.icons8.com/ios-glyphs/90/000000/user--v1.png"/>
+                    <p id = "q2_user_display">My id is : {{ name }}</p>
+                    <p>My role is a editor</p><br><br><br>
+                    <div id="ECAbi"></div>
+                    <!-- <form method="POST", action="x">
+                        <label for="years">Select Label</label><br><br>
+                        <select name="years" id="years">
+                            <option value="=All">All</option>
+                            <option value="2012">2012</option>
+                            <option value="2013">2013</option>
+                            <option value="2014">2014</option>
+                        </select><br><br>
+                        
+                        <input type = "submit" value="submit">
+                    </form> -->
+                    
+
+                </div>
+                
+                
+                {% endblock %}
+
+                {% block content %}
+
+                <div class = "q2cii-right-side">
+
+                    <h1>The Twitter Trending</h1>
+                    <div><canvas id="q2c_myChart" width="800" height="400"></canvas></div>
+                    <div><canvas id="ECA_myChart" width="800" height="400"></canvas></div>
+
+
+                
+
+                </div>
+
+                {% endblock %}
+
+            </div>
+            
+        </div>
+
+
+        
+
+    </body>
+
+        {% block dashboardJS %}
+    
+        <script src="https://d3js.org/d3.v4.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src ="static/dashboard.js"></script>
+
+        {% endblock %}
+
+        
+    
+</html>

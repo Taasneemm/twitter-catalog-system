@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+<html>
+    <head>
+        <!--<link rel="stylesheet" href="static/styles.css">-->
+
+    </head>
+    <body>
+
+        <div class="container">
+
+            <!--header-->
+            <!--<div class="myheader">
+                <div><img src = "static/logo.png"></div>
+                <div><h1>Twitter Cataloging System</h1></div>
+                <div class="navBar">
+                    <a href="{{ url_for('Register') }}">Register</a>
+                    <a href="{{ url_for('index') }}">Login</a>
+                    <a href="{{ url_for('Catalog') }}">Catalog</a>
+                    <a href="{{ url_for('Dashboard') }}">Dashboard</a>
+                    <a href="{{ url_for('Upload') }}">Upload</a>
+                    <a href="{{ url_for('Logout') }}">Logout</a>
+                </div>
+            </div>-->
+            {% block content %}
+
+            <div class="register_tab_body" id="register-html-container">
+
+                <p>
+                    <button type="button" class="register-html_register_tab">Register</button>
+                    <button type="button" class="register-html_login_tab" onclick="window.location.href='{{ url_for('Login') }}';">Login</a></button> 
+
+                </p>
+
+                <form method="POST" action="/Register">
+                    <label for = "register-q2_email_label">Enter Your Email:</label><br>
+                    <input type = "text" id = "register-q2_email_label" name = "register-q2_email_label" ><br>
+
+                    <label for = "register-q2_passwd_label">Enter Your password:</label><br>
+                    <input type = "text" id = "register-q2_passwd_label" name = "register-q2_passwd_label" ><br>
+
+                    <label for = "register-q2_nric_label">Enter Your NRIC:</label><br>
+                    <input type = "text" id = "register-q2_nric_label" name = "register-q2_nric_label" ><br>
+
+                    <input type = "submit" value = "Register" id = "register-q2_register_button">
+
+
+
+                </form>
+
+            </div>
+            {% endblock %}
+
+
+
+            <!--
+
+
+            <div class="register_tab_body" id="register-html-container">
+                <p>
+                    <button type="button" class="register-html_register_tab">Register</button>
+                    <button type="button" class="register-html_login_tab" onclick="window.location.href='login.html';">Login</a></button>
+                        
+                </p>
+                    
+                <label class="email_label">Enter your email:</label><br>
+                <input type="text" class="email_input"><br>
+        
+                <label class="passwd_label">Enter your password:</label><br>
+                <input type="text" class="passwd_input"><br>
+        
+                <label class="nric_label">Enter your NRIC:</label><br>
+                <input type="text" class="nric_input">
+        
+                <div>
+                    <button type="button" class="register_button">Register</button>
+                </div>
+         
+            </div>
+
+        -->
+            
+        </div>
+    </body>
+</html>

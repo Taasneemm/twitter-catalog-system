@@ -1,0 +1,385 @@
+body{
+    background-color: rgb(107, 81, 15);
+    
+}
+.myheader{
+    
+    border-bottom: solid;
+    border-color: black;
+    border-width: 1px;
+    height: 12vh;
+}
+
+div > h1{
+    padding-top: 15px;
+    padding-left: 30px;
+}
+
+div > img{
+    height: 70px;
+    width: 70px;
+    padding-top: 15px;
+    padding-left: 25px;
+}
+.myheader > div{
+    display: inline-block;
+    vertical-align: middle;
+}
+.myheader{
+    background: rgb(233, 191, 86);
+}
+.navBar a{
+    padding-left: 40px;
+    
+}
+
+.navBar{
+    padding-top: 15px;
+}
+
+/* flex-wrap:nowrap means items cannot be spread to multiple lines, 
+all items can only be in 1 line*/
+#catalog-container{
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: white;
+    
+}
+
+.left-side{
+    flex: 20%;
+    text-align: center;
+    padding-top: 30px;
+
+}
+
+.right-side{
+    flex: 80%;
+    box-shadow: 0 0 10px #d3c368;
+    padding-left: 20px;
+    margin-top: 20px;
+    margin-right: 70px;
+    margin-bottom:15px;
+    padding-bottom: 20px;
+    
+}
+
+.q2c-right-side{
+    flex: 80%;
+}
+
+.q2c-uploadButton{
+    border: 0;
+    color: rgb(255, 255, 255);
+    background-color: rgb(182, 163, 57);
+    outline: 0;
+    height: 35px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 2px;
+    width: 30%;
+    margin-bottom: 30px;
+    
+}
+
+.q2c-uploadButton:hover{
+    cursor: pointer;
+    background-color: rgb(21, 204, 21);
+
+}
+
+
+
+
+
+
+
+
+
+
+/* styles for items within right-side */
+
+.right-side > p > textarea{
+    width: 98%;
+}
+
+#whenInput{
+    width: 98%;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid gray;
+}
+
+#mediaInput{
+    width: 98%;
+    background: transparent;
+}
+
+#submitButton{
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    background-color: rgb(167, 150, 59);
+    border: 0;
+    outline: 0;
+    height: 35px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 5px;
+    margin: auto;
+    display: block;
+
+}
+
+.right-side > p{
+    font-weight: 600;
+}
+
+/*style for register.html*/
+
+#register-html-container{
+    background-color: white;
+}
+
+
+
+.register_tab_body{
+    padding-top: 40px;
+    padding-left: 40px;
+    
+}
+
+.register_button:hover{
+    background-color: rgb(21, 204, 21);
+    cursor:pointer;
+}
+
+.register-html_login_tab:hover{
+    cursor:pointer;
+}
+
+.email_input:hover, .passwd_input:hover, .nric_input:hover{
+    box-shadow: rgb(187, 168, 61) 2px 5px;
+}
+
+.email_input, .passwd_input, .nric_input{
+    margin-top: 7px;
+    margin-bottom: 8px;
+}
+
+
+
+.register-html_register_tab, .register-html_login_tab{
+    width:12.5%;
+
+}
+
+/* make register tab more visible in register.html*/
+.register-html_register_tab{
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 2px solid rgb(230, 175, 74);
+    color: black;
+    
+}
+
+/*grey out login tab*/
+.register-html_login_tab{
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    background: transparent;
+    opacity: 0.3;
+}
+
+
+
+
+.register_button{
+    background-color: rgb(167, 144, 13);
+    color: white;
+    font-size: large;
+    text-transform: uppercase;
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    margin-top: 8px;
+    margin-bottom: 30px;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    width: 25%;
+}
+    
+
+.email_input, .passwd_input, .nric_input{
+    width: 25%;
+}
+
+/* style for index.html */
+.login_button{
+    background-color: rgb(167, 144, 13);
+    color: white;
+    font-size: large;
+    text-transform: uppercase;
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    margin-top: 8px;
+    margin-bottom: 30px;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    width: 25%;
+
+}
+
+#index-html-container{
+    background-color: white;
+}
+
+.login_button:hover{
+    background-color: rgb(21, 204, 21);
+    cursor: pointer;
+}
+
+.index-html-email_input, .index-html-passwd_input{
+    width: 25%;
+}
+
+.index-html-email_input:hover, .index-html-passwd_input:hover{
+    box-shadow: rgb(187, 168, 61) 2px 5px;
+}
+
+.index-html-email_input, .index-html-passwd_input{
+    margin-top: 7px;
+    margin-bottom: 8px;
+}
+
+.index-html_OR_login_register_tab{
+    cursor:pointer;
+}
+
+.index-html_OR_login_register_tab, .index-html_OR_login_login_tab{
+    width: 12.5%;
+}
+
+/* make login tab more visible in index.html*/
+.index-html_OR_login_login_tab{
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 2px solid rgb(230, 175, 74);
+    color: black;
+}
+
+/*grey out register tab*/
+.index-html_OR_login_register_tab{
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    background: transparent;
+    opacity: 0.3;
+}
+
+/*style for catalog.html*/
+
+
+.inputField:hover{
+    box-shadow: rgb(187, 168, 61) 2px 5px;
+}
+
+#submitButton:hover{
+    background-color: brown;
+    cursor: pointer;
+    color: black;
+}
+
+table, th, td{
+    border: 1px solid black;
+    
+}
+
+#catalog-html-table-title{
+    text-align: center;
+}
+
+
+
+table{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th{
+    text-align: left;
+
+
+}
+
+#q2_login_button, #register-q2_register_button{
+    background-color: rgb(167, 144, 13);
+    color: white;
+    font-size: large;
+    text-transform: uppercase;
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    margin-top: 8px;
+    margin-bottom: 30px;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    width: 25%;
+
+}
+
+#q2_login_button:hover, #register-q2_register_button:hover{
+    background-color: rgb(21, 204, 21);
+    cursor: pointer;
+    
+}
+
+#q2_passwd_label, #q2_email_label, #register-q2_email_label, #register-q2_passwd_label, #register-q2_nric_label{
+    width: 25%;
+    margin-top: 7px;
+    margin-bottom: 8px;
+}
+
+#q2_passwd_label:hover, #q2_email_label:hover, #register-q2_email_label:hover, #register-q2_passwd_label:hover,  #register-q2_nric_label:hover {
+    box-shadow: rgb(187, 168, 61) 2px 5px;
+
+}
+
+#catalog-tweet-count{
+    padding-top: 20px;
+    padding-bottom: 5px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    
+    
+}
+
+.q2cii-right-side{
+    flex:70%;
+}
+
+#q2c_myChart{
+    padding-bottom: 30px;
+}
+
+
+
+
+
+
+
+
+
+

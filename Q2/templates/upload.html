@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+<html>
+    <head>
+        
+        <!--<link rel="stylesheet" href="static/styles.css">-->
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        
+        
+    </head>
+    <body>
+        <div class="container">
+
+            <!--header-->
+            <!--<div class="myheader">
+                <div><img src = "static/logo.png"></div>
+                <div><h1>Twitter Cataloging System</h1></div>
+                <div class="navBar">
+                    <a href="{{ url_for('Register') }}">Register</a>
+                    <a href="{{ url_for('index') }}">Login</a>
+                    <a href="{{ url_for('Catalog') }}">Catalog</a>
+                    <a href="{{ url_for('Dashboard') }}">Dashboard</a>
+                    <a href="{{ url_for('Upload') }}">Upload</a>
+                    <a href="{{ url_for('Logout') }}">Logout</a>
+                </div> 
+            
+            </div>-->
+
+            <!--Big Container-->
+            {% block sidebar %}
+            <div class = "container" id = "catalog-container">
+
+                
+
+                <div class = "left-side">
+                    <img src = "https://img.icons8.com/ios-glyphs/90/000000/user--v1.png"/>
+                    <p id = "q2_user_display">My id is : {{ name }}</p>
+                    <p>My role is system admin and web master</p>
+
+                </div>
+                {% endblock %}
+
+                {% block content %}
+
+                <div class = "q2c-right-side">
+
+                    <h1>Upload Twitter Catalog Data</h1>
+                    <p>Upload CSV file</p>
+                    <form method = "POST" action="/Upload">
+                    <input type="file" name="q2c-file-input"><br><br>
+                    <input type="submit" value="upload" class="q2c-uploadButton">
+                    </form>
+ 
+
+                </div>
+                {% endblock %}
+
+            </div>
+
+        </div>
+
+    </body>
+    {% block catalogJS %}
+
+    <script src="static/catalog.js"></script>
+    {% endblock %}
+</html>
